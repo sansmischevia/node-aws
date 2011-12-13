@@ -2,6 +2,8 @@
 
 Node AWS is an easy-to-use AWS client.
 
+'' Adding support for SNS ''
+
 ## Usage
 
 ```javascript
@@ -12,15 +14,11 @@ var client = aws.createClient({
   secretAccessKey: '...',
 });
 
-aws.request('simpleDb', 'putAttributes', {
-  domainName: "test",
-  itemName: "item1",
-  attributes: [
-    {
-      name: 'key1',
-      value: 'val1',
-    },
-  ],
+client.request('sns', 'publish', {
+  'TopicArn': topicArn,
+  'Subject': subject,
+  'Message': message,
+  'Action': 'Publish'
 }, function(response) {
   if (response instanceof Error) {
     // uh oh
