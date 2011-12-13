@@ -15,6 +15,7 @@
     "node": "~0.4.7"
   },
   "dependencies": {
-    "libxmljs": "0.4.x"
+    "libxmljs": "0.4.x",
+    "colors": "*"
   }
 }
