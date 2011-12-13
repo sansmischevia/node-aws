@@ -14,17 +14,17 @@ program
 	.version('0.0.1')
 	.parse(process.argv);
 
-var topicArn = program.signingKey || process.env.NDOE_ERR_ARN;
+var topicArn = program.signingKey || process.env.NODE_ERR_ARN;
 
 program.prompt('subject: ', function(subject) {
   program.prompt('message: ', function(message) {
       client.request('sns', 'publish', {
-        'TopicArn': 'arn:aws:sns:us-east-1:443824109149:vungle-errors',
+        'TopicArn': topicArn,
         'Subject': subject,
         'Message': message,
         'Action': 'Publish'
       }, function(response) {
-        console.log('Response: --- ' + JSON.stringify(response, null, '  '));
+        console.log('Response: ' + JSON.stringify(response, null, '  '));
         if (response instanceof Error) {
           // uh oh
           console.log(response.code, response.message);
