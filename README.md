@@ -2,7 +2,7 @@
 
 Node AWS is an easy-to-use AWS client.
 
-'' Adding support for SNS ''
+**Adding support for SNS**
 
 You will need scons to build node-aws, which has a dependency on libxmljs, which uses scons: http://www.scons.org/
 
@@ -34,6 +34,10 @@ client.request('sns', 'publish', {
 ## Status
 
 The most up-to-date list of supported AWS services and methods is available by calling `require('node-aws').getSupportedMethods()`. A potentially outdated list is provided below:
+
+### SNS (Simple Notification Server)
+ 
+ * publish
 
 ### EC2 (Elastic Compute Cloud)
 
