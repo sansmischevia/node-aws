@@ -25,12 +25,6 @@ program.prompt('subject: ', function(subject) {
         'Action': 'Publish'
       }, function(response) {
         console.log('Response: ' + JSON.stringify(response, null, '  '));
-        if (response instanceof Error) {
-          // uh oh
-          console.log(response.code, response.message);
-        } else {
-          console.log(response.code, response.message);
-        }
         exit();
       })
     });
