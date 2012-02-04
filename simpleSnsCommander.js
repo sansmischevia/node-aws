@@ -2,7 +2,6 @@
 
 var program = require('commander');
 var color = require('colors');
-var sys = require('sys');
 var aws = require('./lib/aws');
 
 var client = aws.createClient({
