@@ -3,8 +3,7 @@
 Node AWS is an easy-to-use AWS client.
 
 **Adding support for SNS**
-
-You will need scons to build node-aws, which has a dependency on libxmljs, which uses scons: http://www.scons.org/
+**Does not use libxml2js anymore**
 
 ## Usage
 
